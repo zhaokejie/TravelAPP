@@ -25,13 +25,13 @@ public class DoMesPic extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		System.out.println("存储消息照片");
+		System.out.println("瀛樺偍娑堟伅鐓х墖");
 		HttpSession se = request.getSession(false);
 		
 		User aUser = (User)se.getAttribute("user");
 		
 		String name = aUser.getName();
-		System.out.println(name+"储存消息照片");
+		System.out.println(name+"鍌ㄥ瓨娑堟伅鐓х墖");
 		String picName = request.getHeader("picName");
 //		File FilePic = new File("C:\\TravelApp\\FileAc\\"+name);
 		File pic = new File("C:\\TravelApp\\MesPic\\"+picName);
@@ -40,13 +40,13 @@ public class DoMesPic extends HttpServlet {
 //		FilePic.mkdirs();
 		if(!pic.exists())
 		{
-			System.out.println("文件不存在已创建");
+			System.out.println("鏂囦欢涓嶅瓨鍦ㄥ凡鍒涘缓");
 			pic.createNewFile();
 		}
 
 		FileOutputStream fOut = new FileOutputStream(pic); 
 		int bytes;
-		System.out.println("存储消息照片");
+		System.out.println("瀛樺偍娑堟伅鐓х墖");
 		while((bytes = request.getInputStream().read())!=-1)
 		{
 			fOut.write(bytes);

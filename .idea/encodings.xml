@@ -29,6 +29,7 @@
     <file url="file://$PROJECT_DIR$/src/testServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/testWeather/Weather.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/tools/JiaMi.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/websocket/DoMesPic.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/websocket/WebSocket.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
