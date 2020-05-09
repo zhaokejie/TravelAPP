@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/CorsInterceptor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Location/Coordinate_Sql.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Location/DoWeather.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Location/addCooridinate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Location/addCooridinateH.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Location/showCoordinate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/DoClose.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/DoEmail.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/DoHeadPic.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/DoLogin.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/DoLoginWebsocket.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/DoRegister.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/Register_Sql.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/SessionListenr.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/SessionsManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/getHeadPic.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/getHeadpicN.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/judgeCookie.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/account/sendCookies.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/friend/DoGetFriend.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/friend/Information.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/friend/SearchUser.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/friend/doFriend.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/news/DoNews.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/testServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/testWeather/Weather.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/tools/JiaMi.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/websocket/WebSocket.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
