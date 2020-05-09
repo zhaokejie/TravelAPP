@@ -27,6 +27,7 @@ public class getMesPic extends HttpServlet {
 		User aUser = (User)se.getAttribute("user");
 		String picName = request.getHeader("picName");
 
+
 		String name = aUser.getName();
 		File pic = new File("C:\\TravelApp\\MesPic\\"+picName);
 		
