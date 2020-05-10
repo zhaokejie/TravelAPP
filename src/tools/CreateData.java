@@ -18,10 +18,11 @@ public class CreateData {
     } ;
     public void CreateNewAccount(int acnum)
     {
+        Poi p = new Poi();
         int city1 = (int)(Math.random()*29);
         int city2 = (int)(Math.random()*29);
-        Coordinate[] cityP1 = getCitydata(cities[city1]);
-        Coordinate[] cityP2 = getCitydata(cities[city2]);
+        Coordinate[] cityP1 = p.getCitydata(cities[city1]).toArray(new Coordinate[0]);
+        Coordinate[] cityP2 = p.getCitydata(cities[city2]).toArray(new Coordinate[0]);
 
 
 
@@ -34,7 +35,8 @@ public class CreateData {
             if((test-1)*16>(i+1)*14)
             {
                 int score = (int)(Math.random()*3)+3;
-                alldata.add(new ArrayList<String>(Arrays.asList(String.valueOf(acnum),cityP1[i].typecode,score,new Date().getTime())));  //添加一行
+                alldata.add(new ArrayList<String>(Arrays.asList(String.valueOf(acnum),cityP1[i].getTypecode(),
+                        String.valueOf(score),String.valueOf(new Date().getTime()))));  //添加一行
             }
         }
 

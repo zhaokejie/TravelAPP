@@ -3,13 +3,14 @@ package Location;
 public class Coordinate
 {
 
-    String longitude;
-    String latitude;
-    String time;
-    String title;
-    String address;
-    String typedes;
-    String typecode;
+    public String longitude;
+    public String latitude;
+    public String time;
+    public String title;
+    public String address;
+    public String typedes;
+    public String typecode;
+
     public Coordinate(String lo, String la, String t,String title,String address,String typedes,String typecode) {
         this.longitude=lo;
         this.latitude=la;
@@ -21,5 +22,9 @@ public class Coordinate
     }
     public Coordinate() {
         // TODO Auto-generated constructor stub
+    }
+
+    public String getTypecode() {
+        return typecode;
     }
 }
