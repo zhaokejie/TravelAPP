@@ -35,11 +35,21 @@ public class CreateData {
             if((test-1)*16>(i+1)*14)
             {
                 int score = (int)(Math.random()*3)+3;
-                alldata.add(new ArrayList<String>(Arrays.asList(String.valueOf(acnum),cityP1[i].getTypecode(),
+                alldata.add(new ArrayList<String>(Arrays.asList(String.valueOf(acnum),cityP1[i].getTypecode().substring(0,6),
                         String.valueOf(score),String.valueOf(new Date().getTime()))));  //添加一行
             }
         }
-
+        for(int i = 0;i<20;i++)
+        {
+            int test = (int)(Math.random()*20);
+            if((test-1)*16>(i+1)*14)
+            {
+                int score = (int)(Math.random()*3)+3;
+                alldata.add(new ArrayList<String>(Arrays.asList(String.valueOf(acnum),cityP2[i].getTypecode().substring(0,6),
+                        String.valueOf(score),String.valueOf(new Date().getTime()))));  //添加一行
+            }
+        }
+        System.out.println(alldata.toString());
         Array2CSV(alldata,"fakedata.csv");
     }
 
@@ -63,13 +73,20 @@ public class CreateData {
 
     public static void main(String[] args) throws IOException {
 
-        ArrayList<ArrayList<String>> alldata=new ArrayList<ArrayList<String>>();
-        alldata.add(new ArrayList<String>(Arrays.asList("1","11","111")));  //添加一行
-        alldata.add(new ArrayList<String>(Arrays.asList("2","22","222")));  //添加一行
-        alldata.add(new ArrayList<String>(Arrays.asList("3","33","333")));  //添加一行
-        Array2CSV(alldata,"fakedata.csv");
+//        ArrayList<ArrayList<String>> alldata=new ArrayList<ArrayList<String>>();
+//        alldata.add(new ArrayList<String>(Arrays.asList("1","11","111")));  //添加一行
+//        alldata.add(new ArrayList<String>(Arrays.asList("2","22","222")));  //添加一行
+//        alldata.add(new ArrayList<String>(Arrays.asList("3","33","333")));  //添加一行
+//        Array2CSV(alldata,"fakedata.csv");
 
-        System.out.println();
+        CreateData test = new CreateData();
+        for(int i = 0;i<1800;i++)
+        {
+            test.CreateNewAccount(i);
+            System.out.println("这是第"+i+"个人的数据");
+        }
+
+
 
     }
 
@@ -82,11 +99,12 @@ public class CreateData {
             for (int i = 0; i < data.size(); i++)
             {
                 ArrayList<String> onerow=data.get(i);
-                for (int j = 0; j < onerow.size(); j++)
+                for (int j = 0; j < onerow.size()-1; j++)
                 {
                     out.write(DelQuota(onerow.get(j)));
                     out.write(",");
                 }
+                out.write(DelQuota(onerow.get(onerow.size()-1)));
                 out.newLine();
             }
             out.flush();

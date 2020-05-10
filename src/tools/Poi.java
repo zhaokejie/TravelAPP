@@ -81,8 +81,8 @@ public class Poi {
         return locs;
     }
 
-    public static void main(String[] args) {
-        Poi p = new Poi();
-        p.getPoi("杭州");
-    }
+//    public static void main(String[] args) {
+//        Poi p = new Poi();
+//        p.getPoi("杭州");
+//    }
 }
