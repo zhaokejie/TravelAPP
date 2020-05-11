@@ -24,10 +24,6 @@ public class CreateData {
         Coordinate[] cityP1 = p.getCitydata(cities[city1]).toArray(new Coordinate[0]);
         Coordinate[] cityP2 = p.getCitydata(cities[city2]).toArray(new Coordinate[0]);
 
-
-
-
-
         ArrayList<ArrayList<String>> alldata=new ArrayList<ArrayList<String>>();
         for(int i = 0;i<20;i++)
         {
