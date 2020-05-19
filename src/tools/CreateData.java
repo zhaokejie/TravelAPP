@@ -49,6 +49,26 @@ public class CreateData {
         Array2CSV(alldata,"fakedata.csv");
     }
 
+    public void CreateWord2vecData(int acnum)//造出用户打卡的POI的title数据
+    {
+        Poi p = new Poi();
+        int city1 = (int)(Math.random()*29);
+        Coordinate[] cityP1 = p.getCitydata(cities[city1]).toArray(new Coordinate[0]);
+
+        ArrayList<ArrayList<String>> alldata=new ArrayList<ArrayList<String>>();
+        for(int i = 0;i<20;i++)
+        {
+            int test = (int)(Math.random()*20);
+            if((test-1)*16>(i+1)*14)
+            {
+                int score = (int)(Math.random()*3)+3;
+                alldata.add(new ArrayList<String>(Arrays.asList(String.valueOf(acnum),cityP1[i].getTitle())));  //添加一行
+            }
+        }
+        System.out.println(alldata.toString());
+        Array2CSV(alldata,"word2vec_data.csv");
+    }
+
 
     //废弃的之前的尝试
 
@@ -76,9 +96,10 @@ public class CreateData {
 //        Array2CSV(alldata,"fakedata.csv");
 
         CreateData test = new CreateData();
-        for(int i = 0;i<1800;i++)
+        for(int i = 0;i<500;i++)
         {
-            test.CreateNewAccount(i);
+            //test.CreateNewAccount(i);
+            test.CreateWord2vecData(i);
             System.out.println("这是第"+i+"个人的数据");
         }
 

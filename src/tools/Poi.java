@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Array;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,6 +38,27 @@ public class Poi {
         }
         //System.out.println(alldata);
         CreateData.Array2CSV(alldata,"allCitydata.csv");
+    }
+
+    public void saveword2vec(List<String> cityname)
+    {
+        ArrayList<ArrayList<String>> alldata=new ArrayList<ArrayList<String>>();
+        for (int i = 0;i<cityname.size();i++)
+        {
+            alldata.add(new ArrayList<String>(Collections.singleton(cityname.get(i))));
+            List<Coordinate> locs = getCitydata(cityname.get(i));
+            StringBuffer locdata = new StringBuffer(i);
+            for (int j = 0;j<locs.size();j++)
+            {
+                Coordinate loc = locs.get(j);
+                //System.out.println(temp);
+                locdata.append(","+loc.getTitle());
+            }
+            ArrayList temp = new ArrayList<String>(Arrays.asList(locdata.toString()));
+            alldata.add(temp);
+        }
+        //System.out.println(alldata);
+        CreateData.Array2CSV(alldata,"word2vec_data.csv");
     }
 
     public List<Coordinate> getCitydata(String cityname)
@@ -117,6 +139,8 @@ public class Poi {
                 "深圳","大连","洛阳"
         } ;
 //        String[] cities = {"郑州"};
-        p.saveCitydata(Arrays.asList(cities));
+//        p.saveCitydata(Arrays.asList(cities));
+//        p.saveword2vec(Arrays.asList(cities));
+        p.saveword2vec(Arrays.asList("杭州"));
     }
 }

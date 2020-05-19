@@ -86,17 +86,22 @@ public class Coordinate_Sql {
 			e.printStackTrace();
 		}
 		try {
-			Class.forName(driver);
-			conn=DriverManager.getConnection(url, mysql_user, mysql_password);
+			 Class.forName(driver);
+			 conn=DriverManager.getConnection(url, mysql_user, mysql_password);
 			 stmt= conn.createStatement();
-			
-			 ResultSet rs=stmt.executeQuery("select *from location_data where uid='"+user_id+"' order by time");
+
+			 ResultSet rs=stmt.executeQuery("select *from location_data where uid='"+user_id+"' order by time desc limit 0,9");
 			 System.out.println("1-----------------");
 			 while(rs.next()) {
 				Coordinate coor=new Coordinate();
-				coor.longitude=rs.getString("longitude");
-				coor.latitude=rs.getString("latitude");
-				coor.time=rs.getString("time");	
+				 coor.longitude=rs.getString("longitude");
+				 coor.latitude=rs.getString("latitude");
+				 coor.time=rs.getString("time");
+				 coor.title=rs.getString("title");
+				 coor.address=rs.getString("address");
+				 coor.rating=rs.getInt("rating");
+				 coor.typedes=rs.getString("typedes");
+				 coor.typecode=rs.getString("typecode");
 				System.out.println(coor.time);
 				li.add(coor);	
 			}
@@ -136,9 +141,14 @@ public class Coordinate_Sql {
 			 System.out.println("1-----------------");
 			 while(rs.next()) {
 				Coordinate coor=new Coordinate();
-				coor.longitude=rs.getString("longitude");
-				coor.latitude=rs.getString("latitude");
-				coor.time=rs.getString("time");	
+				 coor.longitude=rs.getString("longitude");
+				 coor.latitude=rs.getString("latitude");
+				 coor.time=rs.getString("time");
+				 coor.title=rs.getString("title");
+				 coor.address=rs.getString("address");
+				 coor.rating=rs.getInt("rating");
+				 coor.typedes=rs.getString("typedes");
+				 coor.typecode=rs.getString("typecode");
 				System.out.println(coor.time);
 				li.add(coor);	
 			}
