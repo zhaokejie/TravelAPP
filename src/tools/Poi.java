@@ -111,7 +111,7 @@ public class Poi {
 
                 System.out.print(title+" "+typedes+" "+typecode+" "+address+"\n");
 
-                locs.add(new Coordinate("","","",title,address,typedes,typecode));
+                locs.add(new Coordinate("","","",title,address,typedes,typecode,0));
             }
 
         } catch (MalformedURLException e) {

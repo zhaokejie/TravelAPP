@@ -1,5 +1,7 @@
 package tools;
 
+import Location.Coordinate;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -45,9 +47,8 @@ public class ControlPython{
 
             //用输入输出流来截取结果
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream(), "gbk"));   //gbk 避免汉字乱码
-
             while ((line = in.readLine()) != null) {
-                System.out.println(line);
+                System.out.println(":"+line);
                 lines.add(line);   //把Python的print值保存了下来
             }
 
@@ -61,7 +62,21 @@ public class ControlPython{
         }
         System.out.println("Java调Python脚本结束");
         String lineData = lines.toString();
+        System.out.println(lineData);
         return lineData;
+    }
+
+    public String buildArgs(String uname, ArrayList<Coordinate> dataList)
+    {
+        String Args = "{"+"'"+uname+"': {";
+        for(Coordinate aData : dataList)
+        {
+            Args += "'"+aData.getTypecode()+"'"+": '"+aData.rating+"',";
+
+        }
+        Args = Args.substring(0, Args.length() - 1);
+        Args += "}";
+        return Args;
     }
 
     public static void main(String[] args) {

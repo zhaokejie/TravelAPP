@@ -121,6 +121,7 @@ public class CreateData {
                     out.write(DelQuota(onerow.get(j)));
                     out.write(",");
                 }
+
                 out.write(DelQuota(onerow.get(onerow.size()-1)));
                 out.newLine();
             }

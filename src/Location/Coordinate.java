@@ -33,4 +33,12 @@ public class Coordinate
     public String getTitle(){
         return title;
     }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public String getTypedes() {
+        return typedes;
+    }
 }
