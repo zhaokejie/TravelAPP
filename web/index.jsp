@@ -11,8 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  Hello World
-  test git
-  重新启动
+  hahahaha
   </body>
 </html>

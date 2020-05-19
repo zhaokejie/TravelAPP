@@ -97,7 +97,7 @@ public class Coordinate_Sql {
 				 coor.longitude=rs.getString("longitude");
 				 coor.latitude=rs.getString("latitude");
 				 coor.time=rs.getString("time");
-				 coor.title=rs.getString("title");
+				 coor.title=rs.getString("poiName");
 				 coor.address=rs.getString("address");
 				 coor.rating=rs.getInt("rating");
 				 coor.typedes=rs.getString("typedes");
@@ -144,7 +144,7 @@ public class Coordinate_Sql {
 				 coor.longitude=rs.getString("longitude");
 				 coor.latitude=rs.getString("latitude");
 				 coor.time=rs.getString("time");
-				 coor.title=rs.getString("title");
+				 coor.title=rs.getString("poiName");
 				 coor.address=rs.getString("address");
 				 coor.rating=rs.getInt("rating");
 				 coor.typedes=rs.getString("typedes");
