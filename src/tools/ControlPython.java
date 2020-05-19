@@ -68,7 +68,7 @@ public class ControlPython{
 
     public String buildArgs(String uname, ArrayList<Coordinate> dataList)
     {
-        String Args = "{"+"'"+uname+"': {";
+        String Args = "{";
         for(Coordinate aData : dataList)
         {
             Args += "'"+aData.getTypecode()+"'"+": '"+aData.rating+"',";
