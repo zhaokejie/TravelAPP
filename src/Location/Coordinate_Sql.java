@@ -153,7 +153,7 @@ public class Coordinate_Sql {
 				li.add(coor);	
 			}
 			conn.close();
-			System.out.println("2-----------------------------------");
+			System.out.println("2-----------------------------------\n\n\n");
 			for(Coordinate c:li)
 			{
 				System.out.println(c.time);
@@ -168,19 +168,19 @@ public class Coordinate_Sql {
 		return null;
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Coordinate_Sql cs=new Coordinate_Sql();
-//		Coordinate coor=new Coordinate("123","321","2019-01-01");
-//		System.out.println(cs.addACoordinate("123", coor));
-//		System.out.println(cs.showCoordinate("123").get(0).longitude);
-//		System.out.println(cs.showCoordinate("123").get(1).longitude);
-//		System.out.println(cs.showCoordinate("123").get(2).longitude);		
-		ArrayList<Coordinate> li = cs.showAllCoordinate();
-		for(int i =0;i<li.size();i++)
-		{
-			System.out.println(li.get(i).time);
-		}
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		Coordinate_Sql cs=new Coordinate_Sql();
+////		Coordinate coor=new Coordinate("123","321","2019-01-01");
+////		System.out.println(cs.addACoordinate("123", coor));
+////		System.out.println(cs.showCoordinate("123").get(0).longitude);
+////		System.out.println(cs.showCoordinate("123").get(1).longitude);
+////		System.out.println(cs.showCoordinate("123").get(2).longitude);
+//		ArrayList<Coordinate> li = cs.showAllCoordinate();
+//		for(int i =0;i<li.size();i++)
+//		{
+//			System.out.println(li.get(i).time);
+//		}
+//	}
 
 }
